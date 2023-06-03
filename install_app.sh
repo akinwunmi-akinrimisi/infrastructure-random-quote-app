@@ -9,7 +9,7 @@ sudo systemctl start httpd.service
 
 # Copy files from GitHub repository
 sudo yum install -y git
-git clone https://github.com/akinwunmi-akinrimisi/random-quote-generator-app.git /var/www/html/
+git clone https://github.com/akinwunmi-akinrimisi/infrastructure-random-quote-app/tree/main/app /var/www/html/
 
 # Change ownership of the files to Apache user
 sudo chown -R apache:apache /var/www/html/
