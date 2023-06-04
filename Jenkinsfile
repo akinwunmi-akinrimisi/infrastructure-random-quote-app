@@ -19,7 +19,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Cloning the repository containing the app files and Terraform templates
-                git 'https://github.com/akinwunmi-akinrimisi/infrastructure-random-quote-app.git'
+                git credentialsId: '8bd673b8-5538-4c5b-9b78-b5618f83fef8', url: 'https://github.com/akinwunmi-akinrimisi/infrastructure-random-quote-app.git'
             }
         }
 
