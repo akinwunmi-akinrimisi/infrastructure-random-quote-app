@@ -2,16 +2,18 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Build and Deploy Infrastructure') {
+      
+        stage ("terraform init") {
             steps {
-                // Change to the directory containing the Terraform templates
-                dir('terraform') {
-                    // Run Terraform commands to deploy or update the infrastructure
-                    sh 'terraform init'
-                    sh 'terraform apply -auto-approve'
-                }
+                sh ('terraform init') 
             }
+        }
+        
+        stage ("terraform Action") {
+            steps {
+                echo "Terraform action is --> ${action}"
+                sh ('terraform ${action} --auto-approve') 
+           }
         }
 
         stage('Clone Repository') {
