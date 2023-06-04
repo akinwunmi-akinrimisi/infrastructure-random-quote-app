@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                // Cloning the repository containing the app files and Terraform templates
-                git 'https://github.com/akinwunmi-akinrimisi/infrastructure-random-quote-app.git'
-            }
-        }
 
         stage('Build and Deploy Infrastructure') {
             steps {
@@ -17,6 +11,13 @@ pipeline {
                     sh 'terraform init'
                     sh 'terraform apply -auto-approve'
                 }
+            }
+        }
+
+        stage('Clone Repository') {
+            steps {
+                // Cloning the repository containing the app files and Terraform templates
+                git 'https://github.com/akinwunmi-akinrimisi/infrastructure-random-quote-app.git'
             }
         }
 
