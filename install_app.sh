@@ -17,4 +17,4 @@ sudo chown -R apache:apache /var/www/html/
 # Restart Apache web server
 sudo systemctl restart httpd.service
 
-sudo echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+# sudo echo "Hello World from $(hostname -f)" > /var/www/html/index.html
