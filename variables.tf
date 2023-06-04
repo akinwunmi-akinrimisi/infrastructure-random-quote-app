@@ -1,10 +1,10 @@
 variable "aws_region" {
-  default = "eu-west-2"
+  default = "us-east-2"
 }
 
 variable "availability_zone" {
   type    = string
-  default = "eu-west-2a"
+  default = "us-east-2a"
 }
 
 variable "vpc_cidr_block" {
@@ -28,5 +28,5 @@ variable "instance_type" {
 variable "aws_key_pair" {
   description = "keypair for Jenkins"
   type        = string
-  default     = "mern-"
+  default     = "jenkins-terraform"
 }
