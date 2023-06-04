@@ -11,7 +11,7 @@ systemctl start httpd.service
 yum install -y git
 
 # Clone the GitHub repository
-git clone https://github.com/akinwunmi-akinrimisi/infrastructure-random-quote-app.git /var/www/html/
+sudo git clone https://github.com/akinwunmi-akinrimisi/infrastructure-random-quote-app.git /var/www/html/
 
 # Change ownership of the files to Apache user
 chown -R apache:apache /var/www/html/
